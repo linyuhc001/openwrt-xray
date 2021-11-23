@@ -16,10 +16,10 @@
 # git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
-rm -rf package/lean/luci-app-jd-dailybonus
-git clone https://github.com/jerrykuku/luci-app-jd-dailybonus package/luci-app-jd-dailybonus
-#git clone https://github.com/yichya/luci-app-xray package/luci-app-xray
-#git clone https://github.com/yichya/openwrt-xray package/openwrt-xray
+#rm -rf package/lean/luci-app-jd-dailybonus
+#git clone https://github.com/jerrykuku/luci-app-jd-dailybonus package/luci-app-jd-dailybonus
+git clone https://github.com/yichya/luci-app-xray package/luci-app-xray
+git clone https://github.com/yichya/openwrt-xray package/openwrt-xray
 # svn co https://github.com/vernesong/OpenClash/branches/dev/luci-app-openclash package/luci-app-openclash
 # svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
 # git clone https://github.com/garypang13/luci-theme-edge package/luci-theme-edge -b 18.06
@@ -30,11 +30,11 @@ git clone https://github.com/jerrykuku/luci-app-jd-dailybonus package/luci-app-j
 # curl -o tools/qemu/patches/0013-qga-invoke-separate-applets-for-guest-shutdown-modes.patch https://github.com/openwrt/packages/blob/master/utils/qemu/patches/0007-qga-invoke-separate-applets-for-guest-shutdown-modes.patch
 
 # 添加openclash
-cd ..
-git clone https://github.com/vernesong/OpenClash
-mv ./OpenClash/luci-app-openclash ./openwrt/package/luci-app-openclash
-rm -rf OpenClash
-cd openwrt
+#cd ..
+#git clone https://github.com/vernesong/OpenClash
+#mv ./OpenClash/luci-app-openclash ./openwrt/package/luci-app-openclash
+#rm -rf OpenClash
+#cd openwrt
 
 # 替换更新默认argon主题
 rm -rf package/lean/luci-theme-argon && git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon -b 18.06
@@ -168,15 +168,15 @@ EOF
 
 # ShadowsocksR插件:
 cat >> .config <<EOF
-CONFIG_PACKAGE_luci-app-ssr-plus=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
+#CONFIG_PACKAGE_luci-app-ssr-plus=y
+#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
+#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
 EOF
 
 # xray插件:
 cat >> .config <<EOF
-#CONFIG_PACKAGE_luci-app-xray=y
-#CONFIG_PACKAGE_openwrt-xray=y
+CONFIG_PACKAGE_luci-app-xray=y
+CONFIG_PACKAGE_openwrt-xray=y
 EOF
 
 # Passwall插件:
