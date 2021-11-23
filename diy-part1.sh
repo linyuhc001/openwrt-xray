@@ -38,7 +38,7 @@ git clone https://github.com/yichya/openwrt-xray package/openwrt-xray
 
 # 替换更新默认argon主题
 # rm -rf package/lean/luci-theme-argon && git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon -b 18.06
-git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+# git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 
 # 替换更新passwall和ssrplus+
 # rm -rf package/openwrt-packages/luci-app-passwall && svn co https://github.com/xiaorouji/openwrt-package/trunk/lienol/luci-app-passwall package/openwrt-packages/luci-app-passwall
@@ -249,10 +249,10 @@ CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
 # CONFIG_PACKAGE_luci-app-amule is not set #电驴离线下载
 # CONFIG_PACKAGE_luci-app-xlnetacc is not set #迅雷快鸟
 # CONFIG_PACKAGE_luci-app-hd-idle is not set #磁盘休眠
-CONFIG_PACKAGE_luci-app-unblockmusic=y #解锁网易云灰色歌曲
-CONFIG_UnblockNeteaseMusic_Go=y
-CONFIG_UnblockNeteaseMusic_NodeJS=y
-CONFIG_PACKAGE_luci-i18n-unblockmusic-zh-cn=y
+#CONFIG_PACKAGE_luci-app-unblockmusic=y #解锁网易云灰色歌曲
+#CONFIG_UnblockNeteaseMusic_Go=y
+#CONFIG_UnblockNeteaseMusic_NodeJS=y
+#CONFIG_PACKAGE_luci-i18n-unblockmusic-zh-cn=y
 # CONFIG_PACKAGE_luci-app-airplay2 is not set #Apple AirPlay2音频接收服务器
 # CONFIG_PACKAGE_luci-app-music-remote-center is not set #PCHiFi数字转盘遥控
 # CONFIG_PACKAGE_luci-app-usb-printer is not set #USB打印机
