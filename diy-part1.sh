@@ -23,6 +23,7 @@ git clone https://github.com/yichya/openwrt-xray package/openwrt-xray
 # svn co https://github.com/vernesong/OpenClash/branches/dev/luci-app-openclash package/luci-app-openclash
 # svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
 # git clone https://github.com/garypang13/luci-theme-edge package/luci-theme-edge -b 18.06
+git clone https://github.com/immortalwrt-collections/luci-app-unblockneteasemusic /package/luci-app-unblockneteasemusic
 
 # 更换qemu
 # rm -rf tools/qemu
@@ -249,7 +250,7 @@ CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
 # CONFIG_PACKAGE_luci-app-amule is not set #电驴离线下载
 # CONFIG_PACKAGE_luci-app-xlnetacc is not set #迅雷快鸟
 # CONFIG_PACKAGE_luci-app-hd-idle is not set #磁盘休眠
-#CONFIG_PACKAGE_luci-app-unblockmusic=y #解锁网易云灰色歌曲
+CONFIG_PACKAGE_luci-app-unblockneteasemusic=y #解锁网易云灰色歌曲
 #CONFIG_UnblockNeteaseMusic_Go=y
 #CONFIG_UnblockNeteaseMusic_NodeJS=y
 #CONFIG_PACKAGE_luci-i18n-unblockmusic-zh-cn=y
