@@ -54,6 +54,7 @@ git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-ar
 
 # 自定义定制选项
 sed -i 's#192.168.1.1#192.168.3.106#g' package/base-files/files/bin/config_generate #定制默认IP
+sed -i 's#option lang auto#option lang zh_cn#g' feeds/luci/modules/luci-base/root/etc/config/luci #修改默认中文
 # sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings #取消系统默认密码
 # sed -i 's#0 6#0 2#g' package/lean/luci-app-adbyby-plus/root/etc/init.d/adbyby #修改adbyby自动更新时间到凌晨2点
 # sed -i 's#url-test#fallback#g' package/luci-app-openclash/root/usr/share/openclash/yml_proxys_set.sh #修改openclash自动生成配置中的urltest为fallback
