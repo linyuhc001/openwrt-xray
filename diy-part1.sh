@@ -179,6 +179,12 @@ CONFIG_PACKAGE_luci-app-xray=y
 CONFIG_PACKAGE_openwrt-xray=y
 EOF
 
+# 汉化:
+cat >> .config <<EOF
+CONFIG_PACKAGE_luci-i18n-base-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-opkg-zh-cn=y
+EOF
+
 # Passwall插件:
 # cat >> .config <<EOF
 # CONFIG_PACKAGE_luci-app-passwall=y
