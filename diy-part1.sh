@@ -38,7 +38,7 @@ git clone https://github.com/yichya/openwrt-xray package/openwrt-xray
 
 # 替换更新默认argon主题
 # rm -rf package/lean/luci-theme-argon && git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon -b 18.06
-# git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 
 # 替换更新passwall和ssrplus+
 # rm -rf package/openwrt-packages/luci-app-passwall && svn co https://github.com/xiaorouji/openwrt-package/trunk/lienol/luci-app-passwall package/openwrt-packages/luci-app-passwall
