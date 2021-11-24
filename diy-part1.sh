@@ -227,6 +227,7 @@ EOF
 
 # 常用LuCI插件:
 cat >> .config <<EOF
+# CONFIG_DEFAULT_luci-app-turboacc is not set
 # CONFIG_PACKAGE_luci-app-adbyby-plus=y #adbyby去广告
 # CONFIG_PACKAGE_luci-app-webadmin is not set #Web管理页面设置
 CONFIG_DEFAULT_luci-app-vlmcsd=y #KMS激活服务器
