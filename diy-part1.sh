@@ -170,15 +170,15 @@ EOF
 
 # ShadowsocksR插件:
 cat >> .config <<EOF
-#CONFIG_PACKAGE_luci-app-ssr-plus=y
-#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
-#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
+CONFIG_PACKAGE_luci-app-ssr-plus=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
 EOF
 
 # xray插件:
 cat >> .config <<EOF
-CONFIG_PACKAGE_luci-app-xray=y
-CONFIG_PACKAGE_openwrt-xray=y
+# CONFIG_PACKAGE_luci-app-xray=y
+# CONFIG_PACKAGE_openwrt-xray=y
 EOF
 
 # 汉化:
