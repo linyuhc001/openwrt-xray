@@ -160,7 +160,7 @@ cat >> .config <<EOF
 # CONFIG_PACKAGE_luci-app-oaf is not set #应用过滤
 #CONFIG_PACKAGE_luci-app-openclash=y #OpenClash
 #CONFIG_PACKAGE_luci-app-jd-dailybonus=y #京东签到
-CONFIG_PACKAGE_luci-app-serverchan=y #微信推送
+#CONFIG_PACKAGE_luci-app-serverchan=y #微信推送
 # CONFIG_PACKAGE_luci-app-eqos is not set #IP限速
 # CONFIG_PACKAGE_luci-app-smartdns is not set #smartdns服务器
 # CONFIG_PACKAGE_luci-app-adguardhome is not set #ADguardhome
@@ -228,9 +228,10 @@ EOF
 # 常用LuCI插件:
 cat >> .config <<EOF
 # CONFIG_DEFAULT_luci-app-turboacc is not set
+# CONFIG_PACKAGE_luci-app-turboacc is not set
 # CONFIG_PACKAGE_luci-app-adbyby-plus=y #adbyby去广告
 # CONFIG_PACKAGE_luci-app-webadmin is not set #Web管理页面设置
-CONFIG_DEFAULT_luci-app-vlmcsd=y #KMS激活服务器
+CONFIG_PACKAGE_luci-app-vlmcsd=y #KMS激活服务器
 CONFIG_PACKAGE_luci-app-filetransfer=y #系统-文件传输
 CONFIG_PACKAGE_luci-app-autoreboot=y #定时重启
 CONFIG_PACKAGE_luci-app-upnp=y #通用即插即用UPnP(端口自动转发)
