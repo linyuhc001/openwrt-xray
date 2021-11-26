@@ -252,11 +252,10 @@ CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
 # CONFIG_PACKAGE_luci-app-amule is not set #电驴离线下载
 # CONFIG_PACKAGE_luci-app-xlnetacc is not set #迅雷快鸟
 # CONFIG_PACKAGE_luci-app-hd-idle is not set #磁盘休眠
-#CONFIG_PACKAGE_luci-app-unblockneteasemusic=y #解锁网易云灰色歌曲
-#CONFIG_UnblockNeteaseMusic_Go=y
-#CONFIG_UnblockNeteaseMusic_NodeJS=y
-CONFIG_PACKAGE_luci-app-unblockneteasemusic-go=y
-#CONFIG_PACKAGE_luci-i18n-unblockmusic-zh-cn=y
+CONFIG_PACKAGE_luci-app-unblockmusic=y #解锁网易云灰色歌曲
+CONFIG_UnblockNeteaseMusic_Go=y
+CONFIG_UnblockNeteaseMusic_NodeJS=y
+CONFIG_PACKAGE_luci-i18n-unblockmusic-zh-cn=y
 # CONFIG_PACKAGE_luci-app-turboacc is not set
 # CONFIG_PACKAGE_luci-app-airplay2 is not set #Apple AirPlay2音频接收服务器
 # CONFIG_PACKAGE_luci-app-music-remote-center is not set #PCHiFi数字转盘遥控
