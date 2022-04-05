@@ -16,14 +16,14 @@
 # git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
-#rm -rf package/lean/luci-app-jd-dailybonus
-#git clone https://github.com/jerrykuku/luci-app-jd-dailybonus package/luci-app-jd-dailybonus
-git clone https://github.com/yichya/luci-app-xray package/luci-app-xray
-git clone https://github.com/yichya/openwrt-xray package/openwrt-xray
+# rm -rf package/lean/luci-app-jd-dailybonus
+# git clone https://github.com/jerrykuku/luci-app-jd-dailybonus package/luci-app-jd-dailybonus
+# git clone https://github.com/yichya/luci-app-xray package/luci-app-xray
+# git clone https://github.com/yichya/openwrt-xray package/openwrt-xray
 # svn co https://github.com/vernesong/OpenClash/branches/dev/luci-app-openclash package/luci-app-openclash
 # svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
 # git clone https://github.com/garypang13/luci-theme-edge package/luci-theme-edge -b 18.06
-git clone https://github.com/immortalwrt-collections/luci-app-unblockneteasemusic /package/luci-app-unblockneteasemusic
+# git clone https://github.com/immortalwrt-collections/luci-app-unblockneteasemusic /package/luci-app-unblockneteasemusic
 
 # 更换qemu
 # rm -rf tools/qemu
@@ -39,7 +39,7 @@ git clone https://github.com/immortalwrt-collections/luci-app-unblockneteasemusi
 
 # 替换更新默认argon主题
 # rm -rf package/lean/luci-theme-argon && git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon -b 18.06
-git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+# git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 
 # 替换更新passwall和ssrplus+
 # rm -rf package/openwrt-packages/luci-app-passwall && svn co https://github.com/xiaorouji/openwrt-package/trunk/lienol/luci-app-passwall package/openwrt-packages/luci-app-passwall
@@ -231,7 +231,7 @@ cat >> .config <<EOF
 # CONFIG_PACKAGE_luci-app-turboacc is not set
 # CONFIG_PACKAGE_luci-app-adbyby-plus=y #adbyby去广告
 # CONFIG_PACKAGE_luci-app-webadmin is not set #Web管理页面设置
-CONFIG_PACKAGE_luci-app-vlmcsd=y #KMS激活服务器
+# CONFIG_PACKAGE_luci-app-vlmcsd=y #KMS激活服务器
 CONFIG_PACKAGE_luci-app-filetransfer=y #系统-文件传输
 CONFIG_PACKAGE_luci-app-autoreboot=y #定时重启
 CONFIG_PACKAGE_luci-app-upnp=y #通用即插即用UPnP(端口自动转发)
