@@ -13,6 +13,8 @@
 ./scripts/feeds update -a && ./scripts/feeds install -a
 
 # 添加第三方软件包
+git clone https://github.com/AlexZhuo/luci-app-bandwidthd.git package/luci-app-bandwidthd
+git clone https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
 # git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
@@ -235,8 +237,8 @@ EOF
 
 # 常用LuCI插件:
 cat >> .config <<EOF
-# CONFIG_DEFAULT_luci-app-turboacc is not set
-# CONFIG_PACKAGE_luci-app-turboacc is not set
+CONFIG_DEFAULT_luci-app-turboacc=y
+CONFIG_PACKAGE_luci-app-turboacc=y
 # CONFIG_PACKAGE_luci-app-adbyby-plus=y #adbyby去广告
 # CONFIG_PACKAGE_luci-app-webadmin is not set #Web管理页面设置
 # CONFIG_PACKAGE_luci-app-vlmcsd=y #KMS激活服务器
@@ -250,6 +252,13 @@ CONFIG_PACKAGE_luci-app-nlbwmon=y #宽带流量监控
 CONFIG_PACKAGE_luci-app-wrtbwmon=y #实时流量监测
 CONFIG_PACKAGE_luci-app-ttyd=y
 CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
+CONFIG_PACKAGE_luci-app-bandwidthd=y
+CONFIG_PACKAGE_luci-app-netspeedtest=y
+CONFIG_PACKAGE_luci-app-mwan3=y
+CONFIG_PACKAGE_luci-app-syncdial=y
+CONFIG_PACKAGE_luci-app-diskman=y
+CONFIG_PACKAGE_lluci-app-docker=y
+CONFIG_PACKAGE_lluci-app-dockerman=y
 # CONFIG_PACKAGE_luci-app-zerotier is not set #zerotier内网穿透
 # CONFIG_PACKAGE_luci-app-sfe is not set #高通开源的 Shortcut FE 转发加速引擎
 # CONFIG_PACKAGE_luci-app-flowoffload is not set #开源 Linux Flow Offload 驱动
@@ -321,9 +330,9 @@ CONFIG_PACKAGE_bash=y
 # CONFIG_PACKAGE_ip6tables-mod-nat=y
 CONFIG_PACKAGE_iptables-mod-extra=y
 CONFIG_PACKAGE_ttyd=y
-CONFIG_PACKAGE_https-dns-proxy=y
-CONFIG_PACKAGE_luci-app-https-dns-proxy=y
-CONFIG_PACKAGE_qemu-ga=y 
+#CONFIG_PACKAGE_https-dns-proxy=y
+#CONFIG_PACKAGE_luci-app-https-dns-proxy=y
+#CONFIG_PACKAGE_qemu-ga=y 
 # CONFIG_PACKAGE_virtio-console-helper=y
 EOF
 
