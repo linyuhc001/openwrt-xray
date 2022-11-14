@@ -175,14 +175,14 @@ EOF
 # ShadowsocksR插件:
 cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-app-ssr-plus=y
-#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
-#CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
 EOF
 
 # vssr插件:
 cat >> .config <<EOF
-CONFIG_PACKAGE_luci-app-vssr=y
-CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Xray=y
+# CONFIG_PACKAGE_luci-app-vssr=y
+# CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Xray=y
 EOF
 
 # xray插件:
