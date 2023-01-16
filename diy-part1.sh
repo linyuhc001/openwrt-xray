@@ -14,7 +14,7 @@
 
 # 添加第三方软件包
 git clone https://github.com/AlexZhuo/luci-app-bandwidthd.git package/luci-app-bandwidthd
-git clone https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
+# git clone https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
 # git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
@@ -256,7 +256,7 @@ CONFIG_PACKAGE_luci-app-wrtbwmon=y #实时流量监测
 CONFIG_PACKAGE_luci-app-ttyd=y
 CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
 CONFIG_PACKAGE_luci-app-bandwidthd=y
-CONFIG_PACKAGE_luci-app-netspeedtest=y
+# CONFIG_PACKAGE_luci-app-netspeedtest is not set
 CONFIG_PACKAGE_luci-app-mwan3=y
 CONFIG_PACKAGE_luci-app-syncdial=y
 CONFIG_PACKAGE_luci-app-docker=y
