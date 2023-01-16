@@ -5,15 +5,15 @@
 # sudo -E apt-get -y install rename
 
 # 更新feeds文件
-# sed -i 's@#src-git helloworld@src-git helloworld@g' feeds.conf.default #启用helloworld
-# cat feeds.conf.default
+sed -i 's@#src-git helloworld@src-git helloworld@g' feeds.conf.default #启用helloworld
+cat feeds.conf.default
 
 # 更新并安装源
 ./scripts/feeds clean
 ./scripts/feeds update -a && ./scripts/feeds install -a
 
 # 添加第三方软件包
-git clone https://github.com/AlexZhuo/luci-app-bandwidthd.git package/luci-app-bandwidthd
+# git clone https://github.com/AlexZhuo/luci-app-bandwidthd.git package/luci-app-bandwidthd
 # git clone https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
 # git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
@@ -163,9 +163,9 @@ cat >> .config <<EOF
 #CONFIG_PACKAGE_luci-app-openclash=y #OpenClash
 #CONFIG_PACKAGE_luci-app-jd-dailybonus=y #京东签到
 #CONFIG_PACKAGE_luci-app-serverchan=y #微信推送
-CONFIG_PACKAGE_luci-app-eqos=y
-CONFIG_PACKAGE_luci-app-netdata=y
-CONFIG_PACKAGE_luci-app-ramfree=y
+#CONFIG_PACKAGE_luci-app-eqos=y
+#CONFIG_PACKAGE_luci-app-netdata=y
+#CONFIG_PACKAGE_luci-app-ramfree=y
 # CONFIG_PACKAGE_luci-app-smartdns is not set #smartdns服务器
 # CONFIG_PACKAGE_luci-app-adguardhome is not set #ADguardhome
 # CONFIG_PACKAGE_luci-app-uugamebooster is not set
@@ -174,7 +174,7 @@ EOF
 
 # ShadowsocksR插件:
 cat >> .config <<EOF
-#CONFIG_PACKAGE_luci-app-ssr-plus=y
+CONFIG_PACKAGE_luci-app-ssr-plus=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
 EOF
@@ -240,7 +240,7 @@ EOF
 # 常用LuCI插件:
 cat >> .config <<EOF
 # CONFIG_DEFAULT_luci-app-turboacc= is not set
-CONFIG_PACKAGE_luci-app-turboacc=y
+#CONFIG_PACKAGE_luci-app-turboacc=y
 # CONFIG_PACKAGE_luci-app-adbyby-plus=y #adbyby去广告
 # CONFIG_PACKAGE_luci-app-webadmin is not set #Web管理页面设置
 # CONFIG_PACKAGE_luci-app-vlmcsd=y #KMS激活服务器
@@ -255,18 +255,18 @@ CONFIG_PACKAGE_luci-app-nlbwmon=y #宽带流量监控
 CONFIG_PACKAGE_luci-app-wrtbwmon=y #实时流量监测
 CONFIG_PACKAGE_luci-app-ttyd=y
 CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
-CONFIG_PACKAGE_luci-app-bandwidthd=y
+#CONFIG_PACKAGE_luci-app-bandwidthd=y
 # CONFIG_PACKAGE_luci-app-netspeedtest is not set
-CONFIG_PACKAGE_luci-app-mwan3=y
-CONFIG_PACKAGE_luci-app-syncdial=y
-CONFIG_PACKAGE_luci-app-docker=y
-CONFIG_PACKAGE_luci-app-dockerman=y
-CONFIG_PACKAGE_luci-app-luci-app-advancedsetting=y
+#CONFIG_PACKAGE_luci-app-mwan3=y
+#CONFIG_PACKAGE_luci-app-syncdial=y
+#CONFIG_PACKAGE_luci-app-docker=y
+#CONFIG_PACKAGE_luci-app-dockerman=y
+#CONFIG_PACKAGE_luci-app-luci-app-advancedsetting=y
 # CONFIG_PACKAGE_luci-app-zerotier is not set #zerotier内网穿透
 # CONFIG_PACKAGE_luci-app-sfe is not set #高通开源的 Shortcut FE 转发加速引擎
 # CONFIG_PACKAGE_luci-app-flowoffload is not set #开源 Linux Flow Offload 驱动
 # CONFIG_PACKAGE_luci-app-haproxy-tcp is not set #Haproxy负载均衡
-CONFIG_PACKAGE_luci-app-diskman=y #磁盘管理磁盘信息
+#CONFIG_PACKAGE_luci-app-diskman=y #磁盘管理磁盘信息
 # CONFIG_PACKAGE_luci-app-transmission is not set #TR离线下载
 # CONFIG_PACKAGE_luci-app-qbittorrent is not set #QB离线下载
 # CONFIG_PACKAGE_luci-app-amule is not set #电驴离线下载
