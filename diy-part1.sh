@@ -332,8 +332,8 @@ CONFIG_PACKAGE_bash=y
 # CONFIG_PACKAGE_ip6tables-mod-nat=y
 CONFIG_PACKAGE_iptables-mod-extra=y
 CONFIG_PACKAGE_ttyd=y
-#CONFIG_PACKAGE_https-dns-proxy=y
-#CONFIG_PACKAGE_luci-app-https-dns-proxy=y
+CONFIG_PACKAGE_https-dns-proxy=y
+CONFIG_PACKAGE_luci-app-https-dns-proxy=y
 #CONFIG_PACKAGE_qemu-ga=y 
 # CONFIG_PACKAGE_virtio-console-helper=y
 EOF
