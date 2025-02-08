@@ -58,7 +58,7 @@ cat feeds.conf.default
 # rm -rf feeds/packages/net/haproxy && svn co https://github.com/lienol/openwrt-packages/trunk/net/haproxy feeds/packages/net/haproxy
 
 # 自定义定制选项
-sed -i 's#192.168.1.1#192.168.3.104#g' package/base-files/files/bin/config_generate #定制默认IP
+# sed -i 's#192.168.1.1#192.168.3.104#g' package/base-files/files/bin/config_generate #定制默认IP
 sed -i 's#option lang auto#option lang zh_cn#g' feeds/luci/modules/luci-base/root/etc/config/luci #修改默认中文
 # sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings #取消系统默认密码
 # sed -i 's#0 6#0 2#g' package/lean/luci-app-adbyby-plus/root/etc/init.d/adbyby #修改adbyby自动更新时间到凌晨2点
@@ -130,10 +130,10 @@ CONFIG_EFI_IMAGES=y
 EOF
 
 # IPv6支持:
-# cat >> .config <<EOF
-# CONFIG_PACKAGE_dnsmasq_full_dhcpv6 is not set
-# CONFIG_PACKAGE_ipv6helper is not set
-# EOF
+cat >> .config <<EOF
+CONFIG_PACKAGE_dnsmasq_full_dhcpv6 is not set
+CONFIG_PACKAGE_ipv6helper is not set
+EOF
 
 # 编译VMware镜像以及镜像填充	
 cat >> .config <<EOF	
@@ -163,12 +163,12 @@ EOF
 # 第三方插件选择:
 cat >> .config <<EOF
 # CONFIG_PACKAGE_luci-app-oaf is not set #应用过滤
-#CONFIG_PACKAGE_luci-app-openclash=y #OpenClash
-#CONFIG_PACKAGE_luci-app-jd-dailybonus=y #京东签到
-#CONFIG_PACKAGE_luci-app-serverchan=y #微信推送
-#CONFIG_PACKAGE_luci-app-eqos=y
-#CONFIG_PACKAGE_luci-app-netdata=y
-#CONFIG_PACKAGE_luci-app-ramfree=y
+# CONFIG_PACKAGE_luci-app-openclash=y #OpenClash
+# CONFIG_PACKAGE_luci-app-jd-dailybonus=y #京东签到
+# CONFIG_PACKAGE_luci-app-serverchan=y #微信推送
+# CONFIG_PACKAGE_luci-app-eqos=y
+# CONFIG_PACKAGE_luci-app-netdata=y
+# CONFIG_PACKAGE_luci-app-ramfree=y
 # CONFIG_PACKAGE_luci-app-smartdns is not set #smartdns服务器
 # CONFIG_PACKAGE_luci-app-adguardhome is not set #ADguardhome
 # CONFIG_PACKAGE_luci-app-uugamebooster is not set
@@ -178,8 +178,8 @@ EOF
 # ShadowsocksR插件:
 cat >> .config <<EOF
 CONFIG_PACKAGE_luci-app-ssr-plus=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
 EOF
 
 # vssr插件:
@@ -198,7 +198,7 @@ EOF
 
 # 汉化:
 cat >> .config <<EOF
-#CONFIG_DEFAULT_SETTINGS_OPTIMIZE_FOR_CHINESE=y
+# CONFIG_DEFAULT_SETTINGS_OPTIMIZE_FOR_CHINESE=y
 EOF
 
 # Passwall插件:
@@ -247,10 +247,10 @@ cat >> .config <<EOF
 # CONFIG_PACKAGE_luci-app-adbyby-plus=y #adbyby去广告
 # CONFIG_PACKAGE_luci-app-webadmin is not set #Web管理页面设置
 # CONFIG_PACKAGE_luci-app-vlmcsd=y #KMS激活服务器
-CONFIG_PACKAGE_luci-app-filetransfer=y #系统-文件传输
+# CONFIG_PACKAGE_luci-app-filetransfer=y #系统-文件传输
 CONFIG_PACKAGE_luci-app-autoreboot=y #定时重启
 CONFIG_PACKAGE_luci-app-upnp=y #通用即插即用UPnP(端口自动转发)
-CONFIG_PACKAGE_luci-app-arpbind=y
+# CONFIG_PACKAGE_luci-app-arpbind=y
 # CONFIG_PACKAGE_luci-app-accesscontrol is not set #上网时间控制
 # CONFIG_PACKAGE_luci-app-wol is not set #网络唤醒
 # CONFIG_PACKAGE_luci-app-frpc is not set #Frp内网穿透
@@ -337,6 +337,7 @@ CONFIG_PACKAGE_iptables-mod-extra=y
 CONFIG_PACKAGE_ttyd=y
 CONFIG_PACKAGE_https-dns-proxy=y
 CONFIG_PACKAGE_luci-app-https-dns-proxy=y
+CONFIG_PACKAGE_qrencode=y
 # CONFIG_PACKAGE_qemu-ga=y 
 # CONFIG_PACKAGE_virtio-console-helper=y
 EOF
