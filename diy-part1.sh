@@ -5,7 +5,10 @@
 # sudo -E apt-get -y install rename
 
 # 更新feeds文件
-sed -i 's@#src-git helloworld@src-git helloworld@g' feeds.conf.default #启用helloworld
+# sed -i 's@#src-git helloworld@src-git helloworld@g' feeds.conf.default #启用helloworld
+sed -i "/helloworld/d" "feeds.conf.default"
+# Add a feed source
+echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 cat feeds.conf.default
 
 # 更新并安装源
