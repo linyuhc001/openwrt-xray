@@ -296,7 +296,7 @@ CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
 # CONFIG_PACKAGE_luci-app-ipsec-vpnd is not set #ipsec VPN服务
 # CONFIG_PACKAGE_luci-app-openvpn-server is not set #openvpn服务
 # CONFIG_PACKAGE_luci-app-softethervpn=y #SoftEtherVPN服务器
-# CONFIG_PACKAGE_luci-app-wireguard is not set
+CONFIG_PACKAGE_luci-app-wireguard=y
 #
 # 文件共享相关(禁用):
 #
@@ -334,7 +334,7 @@ CONFIG_PACKAGE_iptables-mod-extra=y
 CONFIG_PACKAGE_ttyd=y
 CONFIG_PACKAGE_https-dns-proxy=y
 CONFIG_PACKAGE_luci-app-https-dns-proxy=y
-#CONFIG_PACKAGE_qemu-ga=y 
+# CONFIG_PACKAGE_qemu-ga=y 
 # CONFIG_PACKAGE_virtio-console-helper=y
 EOF
 
